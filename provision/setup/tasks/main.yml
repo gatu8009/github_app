@@ -1,0 +1,23 @@
+- name: Fix vagrant locale issue
+  sudo_user: root
+  shell: sudo locale-gen en_IE.UTF-8
+
+- name: Install packages
+  sudo_user: root
+  sudo: yes
+  apt: pkg={{ item }} state=installed update_cache=yes
+  with_items:
+      - nginx
+      # PHP
+      - php5
+      - php5-fpm
+      - php5-cli
+      - php5-curl
+      - curl
+
+- name: Configure Vhost
+  include: source.yml
+
+- name: Reload Nginx
+  sudo_user: root
+  shell: sudo service nginx restart

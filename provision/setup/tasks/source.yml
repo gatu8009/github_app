@@ -1,0 +1,6 @@
+- name: Copy Nginx template
+  sudo_user: root
+  sudo: yes
+  template: src=nginx.conf dest=/etc/nginx/sites-available/default
+  notify:
+    - reload nginx

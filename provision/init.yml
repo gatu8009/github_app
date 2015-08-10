@@ -1,0 +1,7 @@
+---
+
+- hosts: all
+  sudo: true
+  tasks:
+    - name: update apt cache - Just used so that we can generate the private key for vagrant
+      apt: update_cache=yes
