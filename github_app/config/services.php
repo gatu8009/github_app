@@ -35,4 +35,10 @@ return [
         'secret' => '',
     ],
 
+    'github' => [
+        'client_id' => 'f4c40b919b1af6a6b864',
+        'client_secret' => '6353fdb731dc638a521ca957109bc854824c22da',
+        'redirect' => 'http://localhost/account/github',
+    ],
+
 ];

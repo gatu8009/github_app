@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('github', 'AccountController@github_redirect');
+Route::get('account/github', 'AccountController@github');
