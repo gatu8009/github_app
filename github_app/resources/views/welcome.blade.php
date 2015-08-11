@@ -39,6 +39,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>
+                <a href="{!!URL::to('github')!!}">Login with Github</a>
             </div>
         </div>
     </body>
